@@ -77,6 +77,24 @@
                 transform: translateX(-50%);
             }
         }
+        /* Print styles for instant PDF CV generation */
+        @media print {
+            body * {
+                visibility: hidden;
+            }
+            #printable-cv, #printable-cv * {
+                visibility: visible;
+            }
+            #printable-cv {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                display: block !important;
+                background: white !important;
+                color: black !important;
+            }
+        }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-800 dark:bg-slate-950 dark:text-slate-100 transition-colors duration-300 antialiased selection:bg-brand-500 selection:text-white">
@@ -112,6 +130,10 @@
                     <button id="theme-toggle" aria-label="Toggle Dark Mode" class="p-2.5 rounded-xl text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
                         <i id="theme-icon" class="fa-solid fa-moon text-base"></i>
                     </button>
+                    <a href="https://drive.google.com/uc?export=download&id=1HiDa0C4z7QM0O5mSBu0I6gAOVq_d_Z8n" target="_blank" rel="noopener noreferrer" onclick="showToast('Downloading latest CV...')" class="hidden md:inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-800 dark:text-slate-100 text-sm font-semibold transition-all">
+                        <i class="fa-solid fa-file-arrow-down text-brand-600 dark:text-brand-400"></i>
+                        <span>Download CV</span>
+                    </a>
                     <a href="#contact" class="hidden sm:inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-brand-600 hover:bg-brand-700 text-white text-sm font-semibold shadow-sm shadow-brand-600/20 transition-all hover:-translate-y-0.5">
                         <span>Let's Connect</span>
                         <i class="fa-solid fa-arrow-right text-xs"></i>
@@ -131,7 +153,11 @@
             <a href="#projects" class="block px-3 py-2.5 rounded-xl text-base font-medium text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800">Projects</a>
             <a href="#career" class="block px-3 py-2.5 rounded-xl text-base font-medium text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800">Career Path</a>
             <a href="#credentials" class="block px-3 py-2.5 rounded-xl text-base font-medium text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800">Certifications & Awards</a>
-            <div class="pt-2">
+            <div class="pt-2 space-y-2">
+                <a href="https://drive.google.com/uc?export=download&id=1HiDa0C4z7QM0O5mSBu0I6gAOVq_d_Z8n" target="_blank" rel="noopener noreferrer" onclick="showToast('Downloading latest CV...')" class="flex items-center justify-center gap-2 w-full px-4 py-3 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-white font-semibold">
+                    <i class="fa-solid fa-file-arrow-down text-brand-600 dark:text-brand-400"></i>
+                    <span>Download CV</span>
+                </a>
                 <a href="#contact" class="block w-full text-center px-4 py-3 rounded-xl bg-brand-600 text-white font-semibold">Let's Connect</a>
             </div>
         </div>
@@ -168,7 +194,11 @@
                             <i class="fa-solid fa-layer-group"></i>
                             <span>Explore My Work</span>
                         </a>
-                        <a href="#contact" class="inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-xl bg-white dark:bg-slate-900 hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-800 dark:text-slate-100 border border-slate-200 dark:border-slate-700 font-semibold text-sm sm:text-base shadow-sm transition-all">
+                        <a href="https://drive.google.com/uc?export=download&id=1HiDa0C4z7QM0O5mSBu0I6gAOVq_d_Z8n" target="_blank" rel="noopener noreferrer" onclick="showToast('Downloading latest CV...')" class="inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-xl bg-white dark:bg-slate-900 hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-800 dark:text-slate-100 border border-slate-200 dark:border-slate-700 font-semibold text-sm sm:text-base shadow-sm transition-all hover:-translate-y-0.5">
+                            <i class="fa-solid fa-file-arrow-down text-brand-600 dark:text-brand-400"></i>
+                            <span>Download CV</span>
+                        </a>
+                        <a href="#contact" class="inline-flex items-center justify-center gap-2.5 px-5 py-3.5 rounded-xl text-slate-700 dark:text-slate-200 hover:bg-slate-200/60 dark:hover:bg-slate-800/60 font-semibold text-sm sm:text-base transition-all">
                             <i class="fa-regular fa-paper-plane text-brand-600 dark:text-brand-400"></i>
                             <span>Get in Touch</span>
                         </a>
@@ -972,6 +1002,17 @@
                                 </div>
                                 <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
                             </a>
+
+                            <div class="flex flex-wrap items-center gap-3 pt-1">
+                                <a href="https://drive.google.com/uc?export=download&id=1HiDa0C4z7QM0O5mSBu0I6gAOVq_d_Z8n" target="_blank" rel="noopener noreferrer" onclick="showToast('Downloading latest CV...')" class="flex-1 inline-flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-white text-brand-700 hover:bg-brand-50 font-bold text-sm shadow-md transition-colors">
+                                    <i class="fa-solid fa-file-arrow-down"></i>
+                                    <span>Download Latest CV (PDF)</span>
+                                </a>
+                                <a href="https://drive.google.com/file/d/1HiDa0C4z7QM0O5mSBu0I6gAOVq_d_Z8n/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-white/15 hover:bg-white/25 text-white border border-white/20 font-semibold text-sm transition-colors" title="Preview CV in Google Drive">
+                                    <i class="fa-regular fa-eye"></i>
+                                    <span>Preview</span>
+                                </a>
+                            </div>
                         </div>
                     </div>
 
@@ -1007,10 +1048,97 @@
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
             <p>© 2026 Haripriya P R. Crafted with precision for .NET, Cloud &amp; Enterprise Engineering.</p>
             <div class="flex items-center gap-5">
+                <a href="https://drive.google.com/uc?export=download&id=1HiDa0C4z7QM0O5mSBu0I6gAOVq_d_Z8n" target="_blank" rel="noopener noreferrer" onclick="showToast('Downloading latest CV...')" class="hover:text-brand-600 dark:hover:text-brand-400 transition-colors font-medium">Download CV</a>
                 <a href="#home" class="hover:text-brand-600 dark:hover:text-brand-400 transition-colors">Back to Top ↑</a>
             </div>
         </div>
     </footer>
+
+    <!-- Hidden Clean Printable CV Template (Matches Latest CV HaripriyaPR_2.pdf) -->
+    <div id="printable-cv" class="hidden p-8 max-w-4xl mx-auto font-sans text-slate-900 bg-white">
+        <div class="border-b-2 border-slate-800 pb-4 mb-5">
+            <h1 class="text-3xl font-bold tracking-tight text-slate-900">Haripriya P R</h1>
+            <p class="text-base font-semibold text-indigo-700 mt-0.5">Software Engineer | .NET, Cloud &amp; Enterprise Automation</p>
+            <p class="text-xs text-slate-600 mt-1.5">+91-7538895583 &nbsp;|&nbsp; prharipriya1998@gmail.com &nbsp;|&nbsp; linkedin.com/in/haripriyaramaseshan</p>
+        </div>
+
+        <div class="mb-5">
+            <h2 class="text-xs font-bold uppercase tracking-wider text-slate-800 border-b border-slate-300 pb-1 mb-2">Professional Summary</h2>
+            <p class="text-xs leading-relaxed text-slate-700">
+                Software Engineer with 5+ years at Bosch building full-stack .NET applications and PowerShell automation across an enterprise device landscape. Owns delivery end to end: stakeholder requirements, database design, MSAL/SSO security, training and production support. Has replaced legacy desktop tools and manual workflows with modern web portals and automation used by ~200 administrators and all managed Bosch computers.
+            </p>
+        </div>
+
+        <div class="mb-5">
+            <h2 class="text-xs font-bold uppercase tracking-wider text-slate-800 border-b border-slate-300 pb-1 mb-2">Technical Skills</h2>
+            <ul class="text-xs space-y-1 text-slate-700">
+                <li><strong>Advanced:</strong> C#, .NET 8 / .NET Framework, PowerShell</li>
+                <li><strong>Proficient:</strong> ASP.NET MVC / Web API, Blazor, WPF, SQL Server</li>
+                <li><strong>Working knowledge:</strong> JavaScript / HTML / CSS, SCCM, Intune, Azure (App Deployment, SSO, MSAL), Azure DevOps, Git, Jira</li>
+                <li><strong>Foundational:</strong> Python, React, Pester, Playwright for .NET</li>
+                <li><strong>Tools:</strong> Visual Studio, VS Code, GitHub Copilot, PsTools</li>
+            </ul>
+        </div>
+
+        <div class="mb-5">
+            <h2 class="text-xs font-bold uppercase tracking-wider text-slate-800 border-b border-slate-300 pb-1 mb-2">Professional Experience</h2>
+            <div class="mb-3">
+                <div class="flex justify-between items-baseline">
+                    <h3 class="text-sm font-bold text-slate-900">Bosch Global Software Technologies (BGSW), Coimbatore</h3>
+                    <span class="text-xs font-semibold text-slate-600">Jan 2021 – Present</span>
+                </div>
+                <p class="text-xs font-semibold text-indigo-700">.NET &amp; PowerShell Developer, Operating System Services Team</p>
+                <p class="text-[11px] text-slate-600 italic mb-2">Consultant (Jul 2026 – Present) | Senior Associate Consultant (Jan 2023 – Jul 2026) | Associate Software Consultant (Aug 2022 – Jan 2023) | Associate Software Engineer (Jan 2021 – Aug 2022)</p>
+
+                <p class="text-xs font-bold text-slate-800 mt-2 mb-1">Enterprise Web &amp; Desktop Application Development</p>
+                <ul class="list-disc pl-4 text-xs space-y-1 text-slate-700">
+                    <li><strong>Blazor Computer-Management Portal:</strong> Built a Blazor web portal on an internal Swagger API, replacing a legacy Delphi desktop application with stronger security and streamlined workflows for ~200 administrators managing every computer in the Bosch environment. Automated API client generation with Unchase OpenAPI and led stakeholder demos and training. MSAL authentication is planned next.</li>
+                    <li><strong>Hardware Lifecycle Web Application (ASP.NET MVC, Web API, SQL Server):</strong> Replaced error-prone manual Excel tracking with a centralised web platform on a normalised SQL Server schema. Built a UI that generates the configuration INI files consumed by all Bosch client machines, eliminating manual effort and errors for 10–20 operations users.</li>
+                    <li><strong>WPF Client-Health Utility (.NET Core):</strong> Designed a standalone single-executable tool embedding the client health script, with PowerShell remoting and a registry-driven progress bar. Consolidated logs speed up troubleshooting; earned team award recognition.</li>
+                    <li><strong>Internal AI Web Application (Python, React, Azure):</strong> Worked in a team to build the front-end UI for an internal AI application, deployed to Azure with SSO and Identity Management (IDM) role-based access.</li>
+                    <li><strong>Organisation-Wide Tools (.NET):</strong> Maintain the BitLocker and password-recovery web apps (MSAL authentication). Built a URL-to-PDF capture utility using Microsoft Print to PDF for automations, and enhanced the application installation dialog shown to all Bosch users (tested in System context with PsTools).</li>
+                    <li><strong>Ownership and Quality:</strong> Aligned requirements with stakeholders, documented every application, and wrote Pester tests for PowerShell and Playwright for .NET tests for the Blazor UI, using Git branching workflows.</li>
+                </ul>
+
+                <p class="text-xs font-bold text-slate-800 mt-2 mb-1">Endpoint Automation (SCCM &amp; Intune)</p>
+                <ul class="list-disc pl-4 text-xs space-y-1 text-slate-700">
+                    <li><strong>SCCM Client-Health Automation:</strong> Extended a PowerShell remediation script for known Windows and SCCM client issues with disk-space alerting, structured logging and exception handling. Reduced recurring incidents and earned "Star of the Month".</li>
+                    <li><strong>Release Management Orchestration Script:</strong> Contributed enhancements to a script connecting Jira, SQL Server, Azure AD, Intune and SCCM, covering device auto-enrollment, user provisioning and application group assignments.</li>
+                    <li><strong>SCCM Configuration Sync and Monitoring:</strong> Maintained the automation that maps internal framework configurations into SCCM collections and devices, and built health monitoring for it.</li>
+                    <li><strong>Intune Tooling and Silent Packaging:</strong> Scripted Global Retry Schedule handling and on-demand Intune sync. Packaged applications for silent SCCM deployment (PowerShell, PsTools) so users are prompted only when necessary.</li>
+                </ul>
+            </div>
+
+            <div>
+                <div class="flex justify-between items-baseline">
+                    <h3 class="text-sm font-bold text-slate-900">Robert Bosch Engineering and Business Solutions, Coimbatore | Intern</h3>
+                    <span class="text-xs font-semibold text-slate-600">Jan 2020 – May 2020</span>
+                </div>
+                <ul class="list-disc pl-4 text-xs space-y-1 text-slate-700 mt-1">
+                    <li>Contributed to a Permissioned Blockchain Network for Logistics (real-time truck capacity and location tracking); learned how blockchain ensures data integrity and accountability.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="mb-5">
+            <h2 class="text-xs font-bold uppercase tracking-wider text-slate-800 border-b border-slate-300 pb-1 mb-2">Certifications</h2>
+            <ul class="list-disc pl-4 text-xs space-y-1 text-slate-700">
+                <li><strong>Microsoft Certified (active):</strong> DevOps Engineer Expert, Endpoint Administrator Associate, Azure Fundamentals</li>
+                <li><strong>Earlier credential:</strong> Azure Developer Associate (expired; certification retired by Microsoft, Jul 2026), Windows Client (retired)</li>
+                <li><strong>Additional:</strong> ITIL Foundation; Udemy courses in Azure DevOps CI/CD, REST APIs with ASP.NET and C#, Git, Power BI, Hyper-V, PL/SQL, GitHub Copilot</li>
+            </ul>
+        </div>
+
+        <div>
+            <h2 class="text-xs font-bold uppercase tracking-wider text-slate-800 border-b border-slate-300 pb-1 mb-2">Honors, Publications &amp; Education</h2>
+            <ul class="list-disc pl-4 text-xs space-y-1 text-slate-700">
+                <li><strong>Awards:</strong> Client Migration Engine GUI team award (Dec 2022); "Star of the Month" for SCCM Client Health Script (Nov 2021); recognition for Enterprise Application Packaging initiatives; Highest Aggregate up to Second Year (college)</li>
+                <li><strong>Publication:</strong> "Simulation of SDN Enabled Smart Building", IJRASET, Vol. 8, Issue IV (Apr 2020)</li>
+                <li><strong>Education:</strong> B.E. Computer Science and Engineering, Coimbatore Institute of Technology (Anna University), 2016–2020, 89.3% (Higher Secondary 96.75%, Secondary 95.8%)</li>
+                <li><strong>Languages:</strong> English (Professional), Tamil (Native), German (A2)</li>
+            </ul>
+        </div>
+    </div>
 
     <!-- Interactive Scripts -->
     <script>
@@ -1132,6 +1260,14 @@
             window.location.href = `mailto:prharipriya1998@gmail.com?subject=${subject}&body=${body}`;
             contactForm.reset();
         });
+
+        // 7. Download / Save Latest CV as PDF (Triggers Clean Print Layout)
+        function downloadCV() {
+            showToast('Preparing your latest CV for PDF download...');
+            setTimeout(() => {
+                window.print();
+            }, 350);
+        }
     </script>
 </body>
 </html>
